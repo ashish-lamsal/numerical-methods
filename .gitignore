@@ -2,6 +2,14 @@
 # Created by https://www.toptal.com/developers/gitignore/api/c++,vscode
 # Edit at https://www.toptal.com/developers/gitignore?templates=c++,vscode
 
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+
+
 ### C++ ###
 # Prerequisites
 *.d
@@ -49,7 +57,5 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
-
-*.xlsx
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,vscode
