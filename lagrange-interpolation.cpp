@@ -21,20 +21,20 @@ int main() {
     }
 
     float b;
-    cout << "Enter X to interpolate :";
+    cout << "Enter X to interpolate f(X) :";
     cin >> b;
 
-    float c = 0;
+    float sum = 0;
     for (int i = 0; i < N; i++) {
         float temp = 1;
         for (int j = 0; j < N; j++) {
             if (i != j)
                 temp *= (b - X[j]) / (X[i] - X[j]);
         }
-        c += temp * Y[i];
+        sum += temp * Y[i];
     }
 
-    cout << "Y" << b << " = " << c << endl;
+    cout << "Y(" << b << ") = " << sum << endl;
 
     delete[] X;
     delete[] Y;

@@ -28,8 +28,6 @@ int main() {
     float a = exp(D1 / D3);
     float b = D2 / D3;
 
-    cout << "The required equation is ( Y = a e^(bX) ) where," << endl;
-    cout << "a = " << a << ", b = " << b << endl;
-
+    cout << "Required equation is y =" << a << "e^(" << b << "X)" << endl;
     return 0;
 }

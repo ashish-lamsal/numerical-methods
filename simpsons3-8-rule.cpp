@@ -4,7 +4,8 @@
 using namespace std;
 
 float func(float x) {
-    return 1 / (1 + pow(x, 2));
+    return exp(-pow(x, 2));
+    //return 1 / (1 + pow(x, 2));
 }
 
 int main() {

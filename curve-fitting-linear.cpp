@@ -27,7 +27,7 @@ int main() {
     float a = D1 / D3;
     float b = D2 / D3;
     
-    cout << "The required equation is ( Y = a + bX) where," << endl;
+    cout << "The required equation is (Y = a + bX) where," << endl;
     cout << "a = " << a << ", b = " << b << endl;
 
     return 0;

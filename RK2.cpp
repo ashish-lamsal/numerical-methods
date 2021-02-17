@@ -4,7 +4,7 @@
 using namespace std;
 
 float func_prime(float x, float y) {
-    return x * y + y * y;
+    return 2 * pow(x, -1) * sqrt(y + log(x)) + x - 1;
 }
 
 int main() {
@@ -14,11 +14,12 @@ int main() {
     cout << "Enter final value of x (xn): ";
     cin >> xn;
 
-    float h;
-    cout << "Enter step-size :";
-    cin >> h;
+    int n;
+    cout << "Enter no of steps :";
+    cin >> n;
 
-    int n = (xn - x0) / h;
+    // step size
+    float h = (xn - x0) / n;
 
     float x = x0, y = y0;
     float k1 = 0, k2 = 0, k = 0;

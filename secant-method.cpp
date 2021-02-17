@@ -6,7 +6,7 @@
 
 double func(double x) {
 	//return pow(x,3) - 3*pow(x,2) + 2*x - 2;
-	return x*sin(x)+cos(x);
+	return x * sin(x) + cos(x);
 	//return pow(x,2)+4*x+5;
 }
 
@@ -16,8 +16,7 @@ void secant(double a, double b, double epsilon, int NMAX) {
 
 		std::cout << "Iteration-" << N << ":\t a = " << std::fixed << std::setprecision(6) << a <<  " b = " << b << " c=" << c << " and f(c) = " << func(c) << std::endl;
 
-		if (std::abs(func(c)) <= epsilon)
-		{
+		if (std::abs(func(c)) <= epsilon) {
 			std::cout << "After " << N <<" iterations, root is: " << c << std::endl;
 			exit(0);
 		}

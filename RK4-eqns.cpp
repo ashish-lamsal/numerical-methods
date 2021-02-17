@@ -4,11 +4,11 @@
 using namespace std;
 
 float f_prime(float x, float y, float z) {
-    return z;
+    return x * z + 1;
 }
 
 float g_prime(float x, float y, float z) {
-    return x * z - y;
+    return -x * y;
 }
 
 int main() {
@@ -18,11 +18,12 @@ int main() {
     cout << "Enter final value of x (xn): ";
     cin >> xn;
 
-    float h;
-    cout << "Enter step-size :";
-    cin >> h;
+    int n;
+    cout << "Enter no of steps :";
+    cin >> n;
 
-    int n = (xn - x0) / h;
+    // step size
+    float h = (xn - x0) / n;
 
     float x = x0, y = y0, z = z0;
     float k1 = 0, k2 = 0, k3 = 0, k4 = 0, k = 0;
@@ -34,11 +35,11 @@ int main() {
         k2 = h * f_prime(x + h / 2, y + k1 / 2, z + l1 / 2);
         l2 = h * g_prime(x + h / 2, y + k1 / 2, z + l1 / 2);
         
-        k3 = h * f_prime(x + h / 2, h + k2 / 2, z0 + l2 /2);
-        l3 = h * g_prime(x + h / 2, h + k2 / 2, z0 + l2 /2);
+        k3 = h * f_prime(x + h / 2, y + k2 / 2, z + l2 /2);
+        l3 = h * g_prime(x + h / 2, y + k2 / 2, z + l2 /2);
         
-        k4 = h * f_prime(x + h, y + k3, z0 + l3);
-        l4 = h * g_prime(x + h, y + k3, z0 + l3);
+        k4 = h * f_prime(x + h, y + k3, z + l3);
+        l4 = h * g_prime(x + h, y + k3, z + l3);
         
         k = (k1 + 2 * k2 + 2 * k3 + k4) / 6;
         l = (l1 + 2 * l2 + 2 * l3 + l4) / 6;

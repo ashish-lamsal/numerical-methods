@@ -11,15 +11,12 @@ float** getInput(int N) {
 		arr[i] = new float[2 * N];
 
 	// assign values to allocated memory
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < N; j++)
-		{
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
 			cout << "a(" << i + 1 << "," << j + 1 << ")" << " = ";
 			cin >> arr[i][j];
 		}
-		for (int j = N; j < 2 * N; j++)
-		{
+		for (int j = N; j < 2 * N; j++) {
 			if (j == i + N)
 				arr[i][j] = 1;
 			else
@@ -31,10 +28,8 @@ float** getInput(int N) {
 
 void display(float** arr, int N) {
 	// print the augmented matrix
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < 2 * N; j++)
-		{
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < 2 * N; j++) {
 			if (j == N)
 				cout << " : ";
 			cout << setw(10) << fixed << setprecision(3) << arr[i][j];
@@ -47,10 +42,8 @@ void display(float** arr, int N) {
 
 void gaussInverse(float** arr, int N) {
 	// diagonal form
-	for (int j = 0; j < N; j++)
-	{
-		for (int i = 0; i < N; i++)
-		{
+	for (int j = 0; j < N; j++) {
+		for (int i = 0; i < N; i++) {
 			if (i == j)
 				continue;
 
@@ -84,10 +77,8 @@ void gaussInverse(float** arr, int N) {
 
 void result(float** arr, int N) {
 	cout << "Inverse is : " << endl;
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = N; j < 2 * N; j++)
-		{
+	for (int i = 0; i < N; i++) {
+		for (int j = N; j < 2 * N; j++) {
 			cout << setw(10) << fixed << setprecision(3) << arr[i][j];
 		}
 		cout << "\n";

@@ -11,10 +11,8 @@ float** getInput(int N) {
 		arr[i] = new float[N + 1];
 
 	// assign values to allocated memory
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < N; j++)
-		{
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
 			cout << "a(" << i + 1 << "," << j + 1 << ")" << " = ";
 			cin >> arr[i][j];
 		}
@@ -27,10 +25,8 @@ float** getInput(int N) {
 
 void display(float** arr, int N) {
 	// print the augmented matrix
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < N + 1; j++)
-		{
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N + 1; j++) {
 			if (j == N)
 				cout << " : ";
 			cout << setw(10) << fixed << setprecision(3) << arr[i][j];
